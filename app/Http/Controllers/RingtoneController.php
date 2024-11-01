@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ConvertedFile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Log;
 
 class RingtoneController extends Controller
 {
@@ -89,16 +90,25 @@ class RingtoneController extends Controller
 
     public function downloadM4R()
     {
-        $m4rFile = public_path('output/iPhone_Ringtone.m4r');
-        if (file_exists($m4rFile)) {
-            return Response::download($m4rFile, 'iPhone_Ringtone.m4r', [
+        // Get the latest M4R file from the database
+        $latestM4r = ConvertedFile::where('file_type', 'm4r')->latest()->first();
+
+        if ($latestM4r && file_exists(public_path($latestM4r->file_path))) {
+            // Sanitize filename if necessary
+            $safeFileName = preg_replace('/[^A-Za-z0-9_\-\.]/', '_', $latestM4r->file_name);
+
+            return Response::download(public_path($latestM4r->file_path), $safeFileName, [
                 'Content-Type' => 'audio/m4r',
-                'Content-Disposition' => 'attachment; filename="iPhone_Ringtone.m4r"',
+                'Content-Disposition' => 'attachment; filename="' . $safeFileName . '"',
             ]);
         }
 
+        // Log the error for debugging
+        Log::error('M4R file not found', ['latestM4r' => $latestM4r]);
+        
         return redirect()->back()->with('error', 'File not found.');
     }
-}
+} // Closing brace for the RingtoneController class
+
 
 
