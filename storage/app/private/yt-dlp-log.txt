@@ -1,0 +1,10 @@
+[youtube] Extracting URL: https://www.youtube.com/watch?v=j5-yKhDd64s
+[youtube] j5-yKhDd64s: Downloading webpage
+[youtube] j5-yKhDd64s: Downloading ios player API JSON
+[youtube] j5-yKhDd64s: Downloading mweb player API JSON
+[youtube] j5-yKhDd64s: Downloading m3u8 information
+[info] j5-yKhDd64s: Downloading 1 format(s): 251
+[download] Destination: /Users/xyz/Downloads/HTML/ffmpeg/youtube-ringtone-converter/public/output/Android_Ringtone_1730496258.webm
+[download]   0.0% of    3.75MiB at  655.67KiB/s ETA 00:05[download]   0.1% of    3.75MiB at    1.57MiB/s ETA 00:02[download]   0.2% of    3.75MiB at    3.19MiB/s ETA 00:01[download]   0.4% of    3.75MiB at    6.29MiB/s ETA 00:00[download]   0.8% of    3.75MiB at    6.34MiB/s ETA 00:00[download]   1.6% of    3.75MiB at    2.68MiB/s ETA 00:01[download]   3.3% of    3.75MiB at    3.89MiB/s ETA 00:00[download]   6.6% of    3.75MiB at    4.36MiB/s ETA 00:00[download]  13.3% of    3.75MiB at    6.74MiB/s ETA 00:00[download]  26.7% of    3.75MiB at   10.04MiB/s ETA 00:00[download]  53.3% of    3.75MiB at   13.46MiB/s ETA 00:00[download] 100.0% of    3.75MiB at   19.55MiB/s ETA 00:00[download] 100% of    3.75MiB in 00:00:00 at 13.60MiB/s
+[ExtractAudio] Destination: /Users/xyz/Downloads/HTML/ffmpeg/youtube-ringtone-converter/public/output/Android_Ringtone_1730496258.mp3
+Deleting original file /Users/xyz/Downloads/HTML/ffmpeg/youtube-ringtone-converter/public/output/Android_Ringtone_1730496258.webm (pass -k to keep)
