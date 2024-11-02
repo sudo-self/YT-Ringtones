@@ -1,20 +1,27 @@
 import { defineConfig } from 'vite';
-import laravel from 'vite-plugin-laravel';
-import vue from '@vitejs/plugin-vue';
+import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
     plugins: [
         laravel({
-            input: 'resources/js/app.js',
+            input: [
+                'resources/js/app.js',
+                'resources/css/app.css',
+            ],
             refresh: true,
         }),
-        vue(),
+        // Remove the Vue plugin since Vue is no longer used
     ],
     resolve: {
+        // Remove the Vue alias as well
         alias: {
-            vue: 'vue/dist/vue.esm-bundler.js',
+            // Commenting out the Vue alias since it won't be used
+            // vue: 'vue/dist/vue.esm-bundler.js',
         },
     },
 });
+
+
+
 
 
