@@ -1,0 +1,22 @@
+# Exported from Render on 2024-11-02T12:29:20Z
+services:
+- type: web
+  name: YT-Ringtones
+  runtime: static
+  repo: https://github.com/sudo-self/YT-Ringtones
+  envVars:
+  - key: APP_URL
+    sync: false
+  - key: APP_TIMEZONE
+    sync: false
+  - key: APP_DEBUG
+    sync: false
+  - key: APP_KEY
+    sync: false
+  - key: APP_ENV
+    sync: false
+  - key: APP_NAME
+    sync: false
+  buildCommand: yarn install; yarn build
+  staticPublishPath: ./
+version: "1"
