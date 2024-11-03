@@ -1,8 +1,10 @@
-[youtube] Extracting URL: https://www.youtube.com/watch?v=El1kgCqD7Xk
-[youtube] El1kgCqD7Xk: Downloading webpage
-[youtube] El1kgCqD7Xk: Downloading ios player API JSON
-[youtube] El1kgCqD7Xk: Downloading mweb player API JSON
-[youtube] El1kgCqD7Xk: Downloading m3u8 information
-[info] El1kgCqD7Xk: Downloading 1 format(s): 251
-[download] /Users/xyz/Downloads/HTML/ffmpeg/youtube-ringtone-converter/public/output/Paula_Abdul_-_Straight_Up__Official_Music_Video_.mp3 has already been downloaded
-[ExtractAudio] Not converting audio /Users/xyz/Downloads/HTML/ffmpeg/youtube-ringtone-converter/public/output/Paula_Abdul_-_Straight_Up__Official_Music_Video_.mp3; file is already in target format mp3
+[youtube] Extracting URL: https://www.youtube.com/watch?v=sOnqjkJTMaA
+[youtube] sOnqjkJTMaA: Downloading webpage
+[youtube] sOnqjkJTMaA: Downloading ios player API JSON
+[youtube] sOnqjkJTMaA: Downloading mweb player API JSON
+[youtube] sOnqjkJTMaA: Downloading m3u8 information
+[info] sOnqjkJTMaA: Downloading 1 format(s): 251
+[download] Destination: /Users/xyz/Downloads/HTML/ffmpeg/youtube-ringtone-converter/public/output/Michael_Jackson_-_Thriller__Official_4K_Video_.webm
+[download]   0.0% of   12.79MiB at  Unknown B/s ETA Unknown[download]   0.0% of   12.79MiB at    2.31MiB/s ETA 00:05  [download]   0.1% of   12.79MiB at    3.18MiB/s ETA 00:04[download]   0.1% of   12.79MiB at    6.08MiB/s ETA 00:02[download]   0.2% of   12.79MiB at   10.05MiB/s ETA 00:01[download]   0.5% of   12.79MiB at    5.11MiB/s ETA 00:02[download]   1.0% of   12.79MiB at    4.33MiB/s ETA 00:02[download]   1.9% of   12.79MiB at    1.87MiB/s ETA 00:06[download]   3.9% of   12.79MiB at    3.06MiB/s ETA 00:04[download]   7.8% of   12.79MiB at    4.97MiB/s ETA 00:02[download]  15.6% of   12.79MiB at    8.54MiB/s ETA 00:01[download]  31.3% of   12.79MiB at   13.07MiB/s ETA 00:00[download]  62.6% of   12.79MiB at   18.95MiB/s ETA 00:00[download]  76.0% of   12.79MiB at   20.89MiB/s ETA 00:00[download]  76.0% of   12.79MiB at  Unknown B/s ETA Unknown[download]  76.0% of   12.79MiB at    2.21MiB/s ETA 00:01  [download]  76.1% of   12.79MiB at    2.83MiB/s ETA 00:01[download]  76.1% of   12.79MiB at    4.18MiB/s ETA 00:00[download]  76.3% of   12.79MiB at    6.68MiB/s ETA 00:00[download]  76.5% of   12.79MiB at    9.83MiB/s ETA 00:00[download]  77.0% of   12.79MiB at   16.06MiB/s ETA 00:00[download]  78.0% of   12.79MiB at   27.03MiB/s ETA 00:00[download]  79.9% of   12.79MiB at   39.00MiB/s ETA 00:00[download]  83.8% of   12.79MiB at   39.60MiB/s ETA 00:00[download]  91.6% of   12.79MiB at   39.09MiB/s ETA 00:00[download] 100.0% of   12.79MiB at   18.98MiB/s ETA 00:00[download] 100% of   12.79MiB in 00:00:00 at 16.18MiB/s
+[ExtractAudio] Destination: /Users/xyz/Downloads/HTML/ffmpeg/youtube-ringtone-converter/public/output/Michael_Jackson_-_Thriller__Official_4K_Video_.mp3
+Deleting original file /Users/xyz/Downloads/HTML/ffmpeg/youtube-ringtone-converter/public/output/Michael_Jackson_-_Thriller__Official_4K_Video_.webm (pass -k to keep)

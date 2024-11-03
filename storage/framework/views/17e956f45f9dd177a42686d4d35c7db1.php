@@ -83,7 +83,7 @@
 
                                             input[type="text"] {
                                                 background: transparent;
-                                                color: #000; /* Black text color */
+                                                color: #ccc;
                                                 border: 2px dashed #fff;
                                             }
 
@@ -95,10 +95,12 @@
 </head>
 
 <body>
-    <div class="main-content">
-        <h2 class="text-4xl font-bold mb-6 text-center gradient-text">YT 🚀 Ringtones</h2>
-        <form method="POST" action="/convert" class="bg-transparent shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-screen-sm">
-            <?php echo csrf_field(); ?>
+                                        <body class="bg-gray-900 text-gray-200 flex flex-col min-h-screen mt-4">
+
+                                            <div class="main-content flex-grow">
+                                        <h2 class="text-4xl font-bold mb-4 text-center gradient-text">YT 🚀 Ringtones</h2>
+                                                <form method="POST" action="/convert" class="bg-transparent shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-screen-sm mx-auto"> <!-- Added mx-auto for centering -->
+                                                    <?php echo csrf_field(); ?>
             <input type="text" id="url" name="url" placeholder="Enter a Youtube URL" required class="border border-gray-300 p-2 rounded w-full mb-4" />
             <div class="button-container flex justify-between">
                 <button type="button" onclick="pasteUrl()" class="gradient-button font-semibold py-2 px-4 rounded">Paste Link</button>
@@ -137,51 +139,53 @@
             <?php endif; ?>
         </div>
 
-        <div class="h-48 mt-8">
-            <h2 class="text-center gradient-text">♬ Latest Ringtones ♬ </h2><br>
-            <div class="overflow-y-auto h-full w-full max-w-xs mx-auto">
-                <ul class="space-y-2 text-center">
-                    <?php $__currentLoopData = $recentRingtones; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ringtone): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <?php
-                            $filename = pathinfo($ringtone->file_name, PATHINFO_FILENAME);
-                            $extension = pathinfo($ringtone->file_name, PATHINFO_EXTENSION);
-                        ?>
-                        <li class="text-gray-200">
-                            <a href="<?php echo e(asset($ringtone->file_path)); ?>" class="footer-link truncate w-full inline-block"
-                               style="max-width: 100%;">
-                                <?php echo e(Str::limit($filename, 25)); ?>.<?php echo e($extension); ?>
+                                        <body class="bg-gray-900 text-gray-200 flex flex-col min-h-screen">
 
-                            </a>
-                        </li>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                </ul>
-            </div>
-        </div>
-    </div>
+                                            <div class="flex-grow">
+                                                <div class="h-48 mt-8">
+                                                    <h2 class="text-center gradient-text">♬ Latest Ringtones ♬</h2><br>
+                                                    <div class="overflow-y-auto max-h-60 w-full max-w-xs mx-auto border border-gray-600 rounded-lg p-2">
+                                                        <ul class="space-y-2 text-center">
+                                                            <?php $__currentLoopData = $recentRingtones; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ringtone): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                                <?php if($ringtone): ?>
+                                                                    <?php
+                                                                        $filename = pathinfo($ringtone->file_name, PATHINFO_FILENAME);
+                                                                        $extension = pathinfo($ringtone->file_name, PATHINFO_EXTENSION);
+                                                                    ?>
+                                                                    <li class="text-gray-200">
+                                                                        <a href="<?php echo e(asset($ringtone->file_path)); ?>" class="footer-link truncate w-full inline-block" style="max-width: 100%;">
+                                                                            <?php echo e(Str::limit($filename, 25)); ?>.<?php echo e($extension); ?>
 
-    <footer class="text-sm text-gray-200 text-center mt-8">
-        <a href="https://yt.jessejesse.xyz" target="_blank" class="footer-link">
-            <span>YT&nbsp;&#10085;&nbsp;JesseJesse.xyz</span>
-        </a>
-    </footer>
+                                                                        </a>
+                                                                    </li>
+                                                                <?php endif; ?>
+                                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-    <script>
-        async function pasteUrl() {
-            try {
-                if (navigator.clipboard && navigator.clipboard.readText) {
-                    const text = await navigator.clipboard.readText();
-                    document.getElementById("url").value = text;
-                } else {
-                    alert("Clipboard access is not supported on this browser. Please paste the URL manually.");
-                }
-            } catch (err) {
-                console.error("Failed to read clipboard contents: ", err);
-                alert("Unable to paste from clipboard. Please paste the URL manually.");
-            }
-        }
-    </script>
-</body>
-</html>
+                                            <footer class="text-sm text-gray-200 text-center mt-8 p-4 bg-transparent">
+                                                <a href="https://yt.jessejesse.xyz" target="_blank" class="footer-link">
+                                                    <span>YT&nbsp;&#10085;&nbsp;JesseJesse.xyz</span>
+                                                </a>
+                                            </footer>
 
-
+                                            <script>
+                                                async function pasteUrl() {
+                                                    try {
+                                                        if (navigator.clipboard && navigator.clipboard.readText) {
+                                                            const text = await navigator.clipboard.readText();
+                                                            document.getElementById("url").value = text;
+                                                        } else {
+                                                            alert("Clipboard access is not supported on this browser. Please paste the URL manually.");
+                                                        }
+                                                    } catch (err) {
+                                                        console.error("Failed to read clipboard contents: ", err);
+                                                        alert("Unable to paste from clipboard. Please paste the URL manually.");
+                                                    }
+                                                }
+                                            </script>
+                                        </body>
+                                        </html>
 <?php /**PATH /Users/xyz/Downloads/HTML/ffmpeg/youtube-ringtone-converter/resources/views/index.blade.php ENDPATH**/ ?>

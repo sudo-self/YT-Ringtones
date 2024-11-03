@@ -19,11 +19,11 @@ class RingtoneController extends Controller
         $latestMp3 = ConvertedFile::where('file_type', 'mp3')->latest()->first();
         $latestM4r = ConvertedFile::where('file_type', 'm4r')->latest()->first();
 
-        // Only keep non-null entries to prevent errors in the view
-        $recentRingtones = collect([$latestMp3, $latestM4r])->filter();
+        // Get the latest 10 ringtones
+          $recentRingtones = ConvertedFile::whereIn('file_type', ['mp3', 'm4r'])->latest()->take(10)->get();
+          return view('index', compact('recentRingtones'));
+      }
 
-        return view('index', compact('recentRingtones'));
-    }
 
     public function convert(Request $request)
     {
